@@ -1,0 +1,117 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} /* Removing default margin */
+
+.container {
+    background: linear-gradient(135deg, #8b8d34, #eb9d62);
+    min-height: 100vh;
+    border: 10px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.top_section {
+    display: flex; 
+    justify-content: space-between;
+    margin-top: 50px;
+    align-items: first baseline;
+}
+
+.top_section h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+}
+
+.top_section h4 {
+    font-size: 30px;
+    text-align: end;
+}
+
+/* 3D Flip Box Effect */
+.flip-box {
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+    perspective: 1000px; /* Depth effect */
+}
+
+.flip-box-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    border-radius: 10%;
+    transition: transform 0.6s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+    border-radius: 10%;
+    box-shadow: 0px 0px 25px 10px rgba(237, 237, 236, 0.8); /* Glow Effect */
+}
+
+.flip-box-front, .flip-box-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /* Hide the back side until flipped */
+    border-radius: 10%;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.7);
+}
+
+.flip-box-front {
+    background: white;
+}
+
+.flip-box-back {
+    background: black;
+    transform: rotateY(180deg);
+}
+
+.flip-box-front img, .flip-box-back img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+}
+
+/* About Section */
+.about_section {
+    margin-top: 50px;
+}
+
+.about_section h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.about_section p, .one_line {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 1.2px;
+    text-align: justify;
+}
+.one_line{
+    display: block;
+}
+
+/* Footer */
+footer {
+    margin: 50px 0;
+}
+
+footer p {
+    text-align: end;
+}
